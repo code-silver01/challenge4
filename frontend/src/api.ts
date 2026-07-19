@@ -1,4 +1,4 @@
-const API_BASE = 'https://challenge4-production.up.railway.app/api';
+const API_BASE = '/api';
 
 export interface SessionConfig {
   role: 'fan' | 'volunteer' | 'organizer';
