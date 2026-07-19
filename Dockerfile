@@ -22,6 +22,11 @@ COPY --from=frontend-builder /app/frontend/dist /app/static
 
 EXPOSE 8000
 
+# Security: Create a non-root user and change ownership of the app directory
+RUN addgroup --system appgroup && adduser --system --group appuser \
+    && chown -R appuser:appgroup /app
+USER appuser
+
 # Railway sets PORT dynamically, but Uvicorn needs to listen on it. 
 # We'll use 8000 as default if PORT is not set.
 CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
