@@ -18,6 +18,7 @@ from ..agents.wellbeing_agent import WellbeingAgent
 from ..config.settings import get_settings
 from ..models.context import UserContext
 from ..models.schemas import ChatRequest, ChatResponse, Intent
+from ..services.input_sanitizer import sanitize_input
 from ..services.rate_limiter import RateLimiter
 from .session import get_current_session
 
@@ -54,6 +55,9 @@ async def chat_endpoint(
 ) -> ChatResponse:
     """Process a user message and dispatch to the right agent."""
     check_rate_limit(request, chat_req)
+    
+    # 0. Sanitize input at the API boundary
+    chat_req.message = sanitize_input(chat_req.message)
 
     # 1. Classify intent
     intent, entities = await _intent_router.classify(context, chat_req.message)

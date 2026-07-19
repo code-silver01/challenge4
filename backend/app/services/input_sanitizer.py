@@ -35,7 +35,7 @@ _INJECTION_PATTERNS: list[re.Pattern[str]] = [
     ]
 ]
 
-MAX_INPUT_LENGTH: int = 2000
+MAX_INPUT_LENGTH: int = 500
 """Hard cap on user input character count."""
 
 SUPPORTED_LANGUAGES: frozenset[str] = frozenset({"en", "es", "fr", "pt", "hi"})

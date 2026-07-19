@@ -10,6 +10,7 @@ import asyncio
 import logging
 import os
 from contextlib import asynccontextmanager
+from typing import AsyncIterator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -53,7 +54,7 @@ async def _crowd_simulation_loop() -> None:
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Application lifespan — start/stop background tasks."""
     # Seed demo volunteers
     await _seed_demo_data()
@@ -150,7 +151,7 @@ def create_app() -> FastAPI:
     app.include_router(announcements.router, prefix="/api", tags=["Announcements"])
 
     @app.get("/health")
-    async def health_check():
+    async def health_check() -> dict[str, str]:
         """Health check endpoint."""
         return {"status": "healthy", "service": "offsideoperations"}
 
@@ -163,7 +164,8 @@ def create_app() -> FastAPI:
         
         # Catch-all route to serve index.html for React Router compatibility
         @app.get("/{full_path:path}")
-        async def serve_frontend(full_path: str):
+        async def serve_frontend(full_path: str) -> FileResponse:
+            """Serve frontend assets or fallback to index.html."""
             # If the file exists directly (like favicon, vite.svg), serve it
             file_path = os.path.join(static_dir, full_path)
             if os.path.isfile(file_path):
