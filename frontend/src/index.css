@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-fifa-red text-white rounded-lg font-medium shadow hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-fifa-red focus:ring-offset-2 focus:ring-offset-gray-950;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-800 text-gray-200 border border-gray-700 rounded-lg font-medium shadow hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-950;
+  }
+  
+  .card {
+    @apply bg-gray-900/50 backdrop-blur-md rounded-xl shadow-lg border border-gray-800 overflow-hidden;
+  }
+}

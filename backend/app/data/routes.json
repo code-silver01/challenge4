@@ -1,0 +1,138 @@
+{
+  "routes": [
+    {
+      "origin": "Stadium_Main",
+      "destination": "Central_Metro_Station",
+      "options": [
+        {
+          "mode": "shuttle",
+          "time_minutes": 12,
+          "co2_grams": 85,
+          "frequency_minutes": 8,
+          "accessibility_notes": "Wheelchair-accessible shuttle with ramp",
+          "cost": "Free (FIFA shuttle)"
+        },
+        {
+          "mode": "walk",
+          "time_minutes": 25,
+          "co2_grams": 0,
+          "frequency_minutes": null,
+          "accessibility_notes": "Paved sidewalk, fully accessible",
+          "cost": "Free"
+        },
+        {
+          "mode": "bus",
+          "time_minutes": 18,
+          "co2_grams": 120,
+          "frequency_minutes": 15,
+          "accessibility_notes": "Low-floor bus with ramp",
+          "cost": "$2.50"
+        }
+      ]
+    },
+    {
+      "origin": "Stadium_Main",
+      "destination": "Airport_Terminal",
+      "options": [
+        {
+          "mode": "metro",
+          "time_minutes": 35,
+          "co2_grams": 45,
+          "frequency_minutes": 10,
+          "accessibility_notes": "Elevator access at all stations",
+          "cost": "$5.00"
+        },
+        {
+          "mode": "shuttle",
+          "time_minutes": 45,
+          "co2_grams": 150,
+          "frequency_minutes": 20,
+          "accessibility_notes": "Wheelchair-accessible",
+          "cost": "$8.00"
+        },
+        {
+          "mode": "bus",
+          "time_minutes": 55,
+          "co2_grams": 200,
+          "frequency_minutes": 30,
+          "accessibility_notes": "Limited wheelchair spaces, book ahead",
+          "cost": "$4.00"
+        }
+      ]
+    },
+    {
+      "origin": "Stadium_Main",
+      "destination": "Hotel_District",
+      "options": [
+        {
+          "mode": "shuttle",
+          "time_minutes": 15,
+          "co2_grams": 95,
+          "frequency_minutes": 10,
+          "accessibility_notes": "Wheelchair-accessible shuttle",
+          "cost": "Free (FIFA shuttle)"
+        },
+        {
+          "mode": "walk",
+          "time_minutes": 35,
+          "co2_grams": 0,
+          "frequency_minutes": null,
+          "accessibility_notes": "Some uneven sidewalks — not ideal for wheelchairs",
+          "cost": "Free"
+        },
+        {
+          "mode": "metro",
+          "time_minutes": 20,
+          "co2_grams": 30,
+          "frequency_minutes": 8,
+          "accessibility_notes": "Elevator at Hotel District station",
+          "cost": "$3.00"
+        }
+      ]
+    },
+    {
+      "origin": "Stadium_Main",
+      "destination": "Fan_Zone_Park",
+      "options": [
+        {
+          "mode": "walk",
+          "time_minutes": 10,
+          "co2_grams": 0,
+          "frequency_minutes": null,
+          "accessibility_notes": "Fully accessible path through park",
+          "cost": "Free"
+        },
+        {
+          "mode": "shuttle",
+          "time_minutes": 5,
+          "co2_grams": 40,
+          "frequency_minutes": 5,
+          "accessibility_notes": "Wheelchair ramp available",
+          "cost": "Free"
+        }
+      ]
+    },
+    {
+      "origin": "Stadium_Main",
+      "destination": "Parking_Lot_A",
+      "options": [
+        {
+          "mode": "walk",
+          "time_minutes": 15,
+          "co2_grams": 0,
+          "frequency_minutes": null,
+          "accessibility_notes": "Paved path, accessible",
+          "cost": "Free"
+        },
+        {
+          "mode": "shuttle",
+          "time_minutes": 7,
+          "co2_grams": 55,
+          "frequency_minutes": 10,
+          "accessibility_notes": "Wheelchair-accessible",
+          "cost": "Free"
+        }
+      ]
+    }
+  ]
+}
