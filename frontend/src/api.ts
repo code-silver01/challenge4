@@ -1,4 +1,4 @@
-const API_BASE = 'http://127.0.0.1:8000/api';
+const API_BASE = 'https://challenge4-production.up.railway.app/api';
 
 export interface SessionConfig {
   role: 'fan' | 'volunteer' | 'organizer';
