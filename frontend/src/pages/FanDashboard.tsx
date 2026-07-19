@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChatInterface } from '../components/ChatInterface';
 import { api, type Session } from '../api';
-import { MapPin, Navigation, Calendar, Coffee, Mic, Car, ShoppingBag, Loader2 } from 'lucide-react';
+import { Navigation, Calendar, Mic, Car, ShoppingBag, Loader2 } from 'lucide-react';
 import { useChat } from '../hooks/useChat';
 
 const NODE_COORDS: Record<string, { x: number, y: number }> = {
